@@ -1,2 +1,1 @@
-Testing testing testing again
-Testing again.
+git diff shows the difference between the working directory and the staging area
