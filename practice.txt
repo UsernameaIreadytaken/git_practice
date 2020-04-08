@@ -1,6 +1,6 @@
-- git diff shows the difference between the working directory and the staging area.
+1. git diff shows the difference between the working directory and the staging area.
 
-
+2.
 ///code to sync GitHub and local command git///
 
 git push -u origin master
