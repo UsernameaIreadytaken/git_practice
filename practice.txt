@@ -7,80 +7,11 @@ git push
 
 ///code to sync GitHub and local command git///
 
-    /* NAME: Sunny Sun
-	 * DATE: 2020/04/08
-	 * PURPOSE: Write a program that uses a 2-D array to track 
-	 * the rolls of two dice (6 rows and 6 columns for the array.
-	 */
-public class Roll_SunnySun {
-	
+3.
+Function: <function>(input)
+A function (usually) returns things
 
-		public static void main(String[] args)	    {
-		//initializing the variables
-		int[] [] randomRoll = new int [6] [6];
-		int[] total = new int [13];
-		int times, userOption, r1, r2;
+Method:   <object>.<method>(input)   
+The method is implicitly used for an object for which it is called.
+A method changes the object but (usually) does NOT return anything
 
-		//Prompting for input
-
-
-		System.out.println ("How many rolls you want?");
-
-		times = In.getInt ();
-
-		// simulating dice roll
-		System.out.println ("The result is(first roll is horizontal, second is vertical)"); //outputing the data first
-		for (int k = 0 ; k < times ; k++)
-		{
-		    r1 = (int) (Math.random () * 6);
-		    r2 = (int) (Math.random () * 6);
-		    randomRoll [r1] [r2]++;
-		    total [r1 + r2]++;
-		}
-		System.out.println ("First roll:\t(1)\t(2)\t(3)\t(4)\t(5)\t(6)");
-		System.out.println ("Second roll:");
-		for (int k = 0 ; k < 6 ; k++)
-		{
-		    System.out.println ("\t(" + (k + 1) + ")\t" + randomRoll [0] [k] + "\t" +
-		randomRoll [1] [k] + "\t" + randomRoll [2] [k] + 
-		"\t" + randomRoll [3] [k] + "\t" + randomRoll [4] [k] + "\t" + randomRoll [5] [k]);
-		}
-
-
-		//Prompting for input
-		System.out.println ("Which way do you want to display the result(enter \"1\" for raw data, \"2\" for percentages.)"); //then ask the way to  display results
-		userOption = In.getInt ();
-		
-		//OUTPUTS//
-		
-		//if user requests for raw data
-		if (userOption == 1)
-		{
-		    System.out.println ("The raw data:\n");
-		    System.out.println ("Total Roll\t\tTimes");
-		    for (int k = 2 ; k <= 12 ; k++)
-		    {
-			System.out.println (k + "\t\t\t" + total [k - 2]);
-		    }
-		}
-		
-		// if user requests for percentage
-		else if (userOption == 2)
-		{
-		    System.out.println ("The percentage:\n");
-		    System.out.println ("Total Roll\t\tpercentage");
-		    for (int k = 2 ; k <= 12 ; k++)
-		    {
-			System.out.println (k + "\t\t\t" + (total [k - 2] * 100.0f) / times + "%");
-		    }
-		}
-		
-		
-		else
-		{
-		    System.out.println ("INVALID INPUT, please enter 1 or 2.");
-		}
-	    
-	}
-
-}
